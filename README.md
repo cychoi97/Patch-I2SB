@@ -1,6 +1,6 @@
-<h1 align="center"> I<sup>2</sup>SB: Image-to-Image Schrödinger Bridge </h1>
+<h1 align="center"> Patch-I<sup>2</sup>SB: Patch-based Image-to-Image Schrödinger Bridge </h1>
 
-PyTorch implementation of **Patch-I<sup>2</sup>SB** for general image-to-image translation
+PyTorch implementation of **Patch-I<sup>2</sup>SB** for general image-to-image translation. Patch-I<sup>2</sup>SB is a combination of [I2SB](https://github.com/NVlabs/I2SB) and [Patch Diffusion](https://github.com/Zhendong-Wang/Patch-Diffusion) for fast and data-efficient image-to-image translation.
 
 ## General image-to-Image translation
 
