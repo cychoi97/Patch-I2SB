@@ -162,6 +162,13 @@ where `TRAIN` wraps all the the [original (single-node) training options](https:
   journal={arXiv preprint arXiv:2302.05872},
   year={2023},
 }
+
+@article{wang2023patch,
+  title={Patch Diffusion: Faster and More Data-Efficient Training of Diffusion Models},
+  author={Wang, Zhendong and Jiang, Yifan and Zheng, Huangjie and Wang, Peihao and He, Pengcheng and Wang, Zhangyang and Chen, Weizhu and Zhou, Mingyuan},
+  journal={arXiv preprint arXiv:2304.12526},
+  year={2023}
+}
 ```
 
 ## License
