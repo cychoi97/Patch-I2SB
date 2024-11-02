@@ -63,7 +63,7 @@ python train.py --name $NAME --n-gpu-per-node $N_GPU \
     --batch-size $BATCH --microbatch $MICRO_BATCH [--ot-ode] \
     --beta-max $BMAX --log-dir $LOG_DIR [--log-writer $LOGGER] [--run-patch]
 ```
-where `NAME` is the experiment ID, `N_GPU` is the number of GPUs on each node, `DATA_DIR` is the path to the aligned dataset, `BMAX` determines the noise scheduling. The default training on 32GB V100 GPU uses `BATCH=256` and `MICRO_BATCH=2`. If your GPUs have less than 32GB, consider lowering `MICRO_BATCH` or using samller network.
+where `NAME` is the experiment ID, `N_GPU` is the number of GPUs on each node, `DATA_DIR` is the path to the aligned dataset, `BMAX` determines the noise scheduling. The default training on 32GB V100 GPU uses `BATCH=256` and `MICRO_BATCH=2`. If your GPUs have less than 32GB, consider lowering `MICRO_BATCH` or using smaller network.
 
 Add `--ot-ode` for optionally training an OT-ODE model, _i.e.,_ the limit when the diffusion vanishes. By defualt, the model is discretized into 1000 steps; you can change it by adding `--interval $INTERVAL`.
 Note that we initialize the network with [ADM](https://github.com/openai/guided-diffusion) ([256x256_diffusion_uncond.pt](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt) and [512x512_diffusion_uncond.pt](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/512x512_diffusion.pt)), which will be automatically downloaded to `data/` at first call.
