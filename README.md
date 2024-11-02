@@ -2,21 +2,45 @@
 
 PyTorch implementation of **Patch-I<sup>2</sup>SB**. Patch-I<sup>2</sup>SB is a combination of [I2SB](https://github.com/NVlabs/I2SB) and [Patch Diffusion](https://github.com/Zhendong-Wang/Patch-Diffusion) for fast and data-efficient image-to-image translation.
 
-## General image-to-Image translation
+## What has changed from the original I2SB?
 
-In additinoal to image restoration tasks, **I<sup>2</sup>SB** can also be applied to general image-to-image translation such as [pix2pix](https://github.com/phillipi/pix2pix). For more general tasks, we recommand adding the flag `--cond-x1` to the [training options](https://github.com/NVlabs/I2SB#training) to overcome the large information loss in the new priors.
-Visualization of the generation processes of **I<sup>2</sup>SB** are shown below.
+* Data corruption process code for restoration tasks is removed. This code is only for general image-to-image translation tasks.
+* Dataloader is changed from lmbd to customized dataloader. Use `dataset/dataloader.py` borrowed from [stylegan2-ada-pytorch](https://github.com/NVlabs/stylegan2-ada-pytorch)'s dataloader. It also supports the CT dicom file extension, and other medical imaging modalities will be supported later.
+* Image512Net class is added in `network.py` for 512 x 512 resolution image training.
+* Evaluation metric for validation is changed from accuracy to (RMSE, PSNR, and SSIM).
+* Patch diffusion technique is applied. You can use it by adding the flag `--run-patch` to the [training options](https://github.com/cychoi97/Patch-I2SB#training).
 
-<div align="center">
-    <img src="assets/pix2pix.png" width="820">
-</div>
+### Caution
+
+For general tasks, I2SB authors recommanded adding the flag `--cond-x1` to the [training options](https://github.com/NVlabs/I2SB#training) to overcome the large information loss in the new priors.
 
 ## Installation
 
-This code is developed with Python3, and we recommend PyTorch >=1.11. Install the dependencies with [Anaconda](https://www.anaconda.com/products/individual) and activate the environment `i2sb` with
+This code is developed with Python3, and we recommend PyTorch >=1.11.
+Install the other packages in `requirements.txt` following:
 ```bash
-conda env create --file requirements.yaml python=3
-conda activate i2sb
+pip install -r requirements.txt
+```
+
+### Prepare your own dataset
+
+For example, you should set dataset path following:
+```text
+dataset_dir
+    ├── train
+          ├── src
+                ├── *
+                      ├── 0001.png
+                      ├── 0002.png
+                      └── 0003.png
+                ├── **
+                └── ***
+          └── trg
+               ├── *
+               ├── **
+               └── ***
+    ├── valid
+    └── test
 ```
 
 ## Download pre-trained checkpoints
