@@ -1,4 +1,4 @@
-<h1 align="center"> I<sup>2</sup>SB: Image-to-Image Schrödinger Bridge <h1 align="center">
+<h1 align="center"> I<sup>2</sup>SB: Image-to-Image Schrödinger Bridge </h1>
 
 PyTorch implementation of **Patch-I<sup>2</sup>SB** for general image-to-image translation
 
