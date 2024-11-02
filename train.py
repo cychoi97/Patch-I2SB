@@ -77,7 +77,7 @@ def create_training_options():
     # --------------- optimizer and loss ---------------
     parser.add_argument("--batch-size",     type=int,   default=16)
     parser.add_argument("--microbatch",     type=int,   default=2,           help="accumulate gradient over microbatch until full batch-size")
-    parser.add_argument("--start-itr",      type=int,   default=0,           help="resumed checkpoint iteration")
+    parser.add_argument("--start-itr",      type=int,   default=0,           help="start or resumed iteration")
     parser.add_argument("--num-itr",        type=int,   default=15000,       help="training iteration")
     parser.add_argument("--lr",             type=float, default=5e-5,        help="learning rate")
     parser.add_argument("--lr-gamma",       type=float, default=0.99,        help="learning rate decay ratio")
