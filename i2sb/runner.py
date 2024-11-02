@@ -242,7 +242,7 @@ class Runner(object):
 
             # -------- logging --------
             log.info("train_it {}/{} | lr:{} | loss:{}".format(
-                1+it,
+                it,
                 opt.num_itr,
                 "{:.2e}".format(optimizer.param_groups[0]['lr']),
                 "{:+.4f}".format(loss.item()),
@@ -387,9 +387,9 @@ class Runner(object):
         ssim_list = []
 
         for i in range(img_clean.size(0)):
-            rmse_list.append(np.sqrt(mse((np.array(img_clean[i, 0, ...]+1)/2*4095-1024), np.array((img_recon[i, 0, ...]+1)/2*4095-1024))))
-            psnr_list.append(psnr((np.array(img_clean[i, 0, ...]+1)/2*4095-1024), np.array((img_recon[i, 0, ...]+1)/2*4095-1024), data_range=4096))
-            ssim_list.append(ssim((np.array(img_clean[i, 0, ...]+1)/2*4095-1024), np.array((img_recon[i, 0, ...]+1)/2*4095-1024), data_range=4096))
+            rmse_list.append(np.sqrt(mse((np.array(img_clean[i, 0, ...]+1)/2*255), np.array((img_recon[i, 0, ...]+1)/2*255))))
+            psnr_list.append(psnr((np.array(img_clean[i, 0, ...]+1)/2*255), np.array((img_recon[i, 0, ...]+1)/2*255), data_range=256))
+            ssim_list.append(ssim((np.array(img_clean[i, 0, ...]+1)/2*255), np.array((img_recon[i, 0, ...]+1)/2*255), data_range=256))
         
         log.info("Logging metrics ...")
         log.info(f"RMSE | Mean: {np.mean(rmse_list)}, SD: {np.std(rmse_list)}")
