@@ -1,21 +1,6 @@
-<h1 align="center"> <img src="assets/favicon.ico" height="25"/> I<sup>2</sup>SB: Image-to-Image Schrödinger Bridge <img src="assets/favicon.ico" height="25"/> </h1>
-<div align="center">
-  <a href="https://ghliu.github.io/" target="_blank">Guan-Horng&nbsp;Liu</a><sup>1</sup> &ensp; <b>&middot;</b> &ensp;
-  <a href="http://latentspace.cc/arash_vahdat/" target="_blank">Arash&nbsp;Vahdat</a><sup>2</sup> &ensp; <b>&middot;</b> &ensp;
-  <a href="https://ai.stanford.edu/~dahuang/" target="_blank">De-An&nbsp;Huang</a><sup>2</sup> &ensp; <b>&middot;</b> &ensp;
-  <a href="https://sites.gatech.edu/acds/people/" target="_blank">Evangelos&nbsp;A.&nbsp;Theodorou</a><sup>1</sup>
-  <br>
-  <a href="https://weilinie.github.io/" target="_blank">Weili&nbsp;Nie</a><sup>2,</sup>† &ensp; <b>&middot;</b> &ensp;
-  <a href="http://tensorlab.cms.caltech.edu/users/anima/" target="_blank">Anima&nbsp;Anandkumar</a><sup>2,3,</sup>† <br>
-  <sup>1</sup>Georgia Tech &emsp; <sup>2</sup>NVIDIA Corporation &emsp; <sup>3</sup>Caltech &emsp; †equal advising <br>
-</div>
-<h3 align="center">[<a href="https://i2sb.github.io/">project page</a>] [<a href="https://arxiv.org/abs/2302.05872">arXiv</a>]</h3>
+<h1 align="center"> I<sup>2</sup>SB: Image-to-Image Schrödinger Bridge
 
-Official PyTorch implementation of **I<sup>2</sup>SB**, a new class of conditional diffusion models that directly construct diffusion bridges between two given distributions. **I<sup>2</sup>SB** yields interpretable generation, enjoys better sampling efficiency, and sets new records on many image restoration tasks.
-
-<div align="center">
-    <img src="assets/diagram.png" height="260"><img src="assets/inpaint.gif" height="210"><img src="assets/jpeg5.gif" height="210">
-</div>
+PyTorch implementation of **Patch-I<sup>2</sup>SB** for general image-to-image translation
 
 ## General image-to-Image translation
 
