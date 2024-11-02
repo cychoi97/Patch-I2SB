@@ -56,7 +56,7 @@ results/
 
 ## Training
 
-To train an **I<sup>2</sup>SB** on a single node, run
+To train an **Patch-I<sup>2</sup>SB** on a single node, run
 ```bash
 python train.py --name $NAME --n-gpu-per-node $N_GPU \
     --src $SRC --trg $TRG --dataset-dir $DATA_DIR \
