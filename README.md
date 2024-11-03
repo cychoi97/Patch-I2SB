@@ -45,10 +45,10 @@ $DATA_DIR/                           # dataset directory
     └── test/                        # test folder
 
 results/
-├── $NAME/                           # experiment ID set in train.py --name $NAME
-│   ├── $NUM_ITR.pt                  # latest checkpoint: network, ema, optimizer
-│   ├── options.pkl                  # full training options
-│   └── samples_nfe$NFE/             # images reconstructed from sample.py --nfe $NFE
+├── $NAME/                               # experiment ID set in train.py --name $NAME
+│   ├── $NUM_ITR.pt                      # latest checkpoint: network, ema, optimizer
+│   ├── options.pkl                      # full training options
+│   └── samples_nfe$NFE_iter$NUM_ITR/    # images reconstructed from sample.py --nfe $NFE --num-itr $NUM_ITR
 │       └── recon.pt
 ├── ...
 ```
