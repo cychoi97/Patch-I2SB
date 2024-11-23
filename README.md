@@ -9,7 +9,6 @@ PyTorch implementation of **Patch-I<sup>2</sup>SB**. Patch-I<sup>2</sup>SB is a 
 * Image512Net class is added in `network.py` for 512 x 512 resolution image training.
 * Evaluation metric for validation is changed from accuracy to (RMSE, PSNR, and SSIM).
 * Patch diffusion technique is applied. You can use it by adding the flag `--run-patch` to the [training options](https://github.com/cychoi97/Patch-I2SB#training).
-* Support CT dicom file.
 
 ### Caution
 
